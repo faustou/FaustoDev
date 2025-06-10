@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   return (
     <>
