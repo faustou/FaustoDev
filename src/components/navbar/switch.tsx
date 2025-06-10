@@ -2,7 +2,12 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Switch = ({ theme, setTheme }) => {
+type SwitchProps = {
+  theme: 'dark' | 'light';
+  setTheme: (mode: 'dark' | 'light') => void;
+};
+
+const Switch: React.FC<SwitchProps> = ({ theme, setTheme }) => {
   const [isOn, setIsOn] = useState(theme === 'dark');
 
   const toggleMode = () => {
@@ -13,8 +18,8 @@ const Switch = ({ theme, setTheme }) => {
 
   return (
     <ToggleWrapper
+      $mode={theme}
       onClick={toggleMode}
-      data-darkmode={isOn}
       style={{ justifyContent: isOn ? 'flex-end' : 'flex-start' }}
     >
       <motion.div layout className="handle">
@@ -35,13 +40,12 @@ const Switch = ({ theme, setTheme }) => {
 
 export default Switch;
 
-
-const ToggleWrapper = styled.div`
+const ToggleWrapper = styled.div<{ $mode: 'dark' | 'light' }>`
   height: 24px;
   width: 48px;
   padding: 3px;
-  background: ${({ theme }) =>
-    theme === 'dark'
+  background: ${({ $mode }) =>
+    $mode === 'dark'
       ? 'linear-gradient(135deg, #2a0845, #6441a5)'
       : 'linear-gradient(135deg, #eee, #ccc)'};
   border-radius: 50px;
@@ -49,13 +53,13 @@ const ToggleWrapper = styled.div`
   align-items: center;
   cursor: pointer;
   transition: background 0.3s ease;
-  border: 1px solid ${({ theme }) => (theme === 'dark' ? '#a259ff' : '#999')};
+  border: 1px solid ${({ $mode }) => ($mode === 'dark' ? '#a259ff' : '#999')};
 
   .handle {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: ${({ theme }) => (theme === 'dark' ? '#fff' : '#222')};
+    background-color: ${({ $mode }) => ($mode === 'dark' ? '#fff' : '#222')};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,6 +67,6 @@ const ToggleWrapper = styled.div`
 
   .icon {
     font-size: 0.75rem;
-    color: ${({ theme }) => (theme === 'dark' ? '#501a96' : '#f5a623')};
+    color: ${({ $mode }) => ($mode === 'dark' ? '#501a96' : '#f5a623')};
   }
 `;

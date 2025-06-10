@@ -31,12 +31,6 @@ const Navbar = ({ theme, setTheme }) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
-    const items = [
-      { label: "Sobre Mí", href: "#AboutMe" },
-      { label: "Proyectos", href: "#Proyects" },
-      { label: "Habilidades", href: "#Tools" },
-      { label: "Contacto", href: "#Footer" },
-    ];
     console.log("Menu is open?", isOpen);
     return (
       <>
