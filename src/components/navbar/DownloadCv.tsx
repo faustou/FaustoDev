@@ -22,10 +22,14 @@ const DownloadCv = () => {
       {open && (
         <DropdownMenu>
           <DropdownItem href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            Ver CV
+            <a href="https://drive.google.com/file/d/171yd2DhMenhrck8ij_KfkAiEeggU7dsJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Ver CV
+            </a>
           </DropdownItem>
           <DropdownItem href="/cv.pdf" download rel="noopener noreferrer">
-            Descargar CV
+            <a href="/Frontend-Dev-Fausto-Scarmato.pdf" download className="btn-descargar-cv">
+              Descargar CV
+            </a>
           </DropdownItem>
         </DropdownMenu>
       )}
@@ -83,5 +87,10 @@ const DropdownItem = styled.a`
 
   &:hover {
     background-color: ${({ theme }) => theme.primary + '22'};
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.text};
   }
 `;
