@@ -41,9 +41,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
+      <a href="#AboutMe" className="scroll-top-button">
+        ⬆ Volver al inicio
+      </a>
       <p className="copyright">© 2024 Fausto Scarmato. Todos los derechos reservados.</p>
+
     </FooterStyles>
+    
   );
 };
 
@@ -57,6 +61,30 @@ const FooterStyles = styled.footer`
   color: ${({ theme }) => theme.text};
   font-family: 'Kanit', sans-serif;
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+
+    /* Footer arrow-up */
+
+    .scroll-top-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: ${({ theme }) => theme.text};
+      border: 1px solid ${({ theme }) => theme.text};
+      padding: 1rem;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-family: 'Kanit', sans-serif;
+    }
+
+    .scroll-top-button:hover {
+      color: #fff;
+    }
 
   .footer-inner {
     max-width: 1080px;
@@ -192,4 +220,7 @@ const FooterStyles = styled.footer`
       text-align: center;
     }
   }
+
+
+
 `;
