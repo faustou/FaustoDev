@@ -176,7 +176,7 @@ const Proyects = () => {
               <strong>Tecnologías:</strong> React, SDK Mercado Pago, CSS, Bootstrap
             </p>
             <div className="modal-actions">
-              <a href="">
+              <a href="https://fitness-frontend-topaz.vercel.app" target="_blank" rel="noopener noreferrer" >
                 <Button className="modal-visit-gafit">Visitar sitio</Button>
               </a>
             </div>
