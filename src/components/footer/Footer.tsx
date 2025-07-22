@@ -87,7 +87,9 @@ const FooterStyles = styled.footer`
     }
 
   .footer-inner {
+    width: 100%;
     max-width: 1080px;
+    padding: 0 2rem; /* para que no quede pegado a los bordes */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

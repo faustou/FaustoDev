@@ -5,7 +5,7 @@ const AboutMe = () => {
     return (
         <AboutMeStyles>
             <div className='aboutMetextContainer'>
-                <img src="https://i.ibb.co/7dSvZ8nM/bubble.png" alt="perfil-photo" />
+                <img src="https://i.ibb.co/xtybWrMz/imagen-2025-06-17-192839384.png" alt="perfil-photo" />
             </div>
             <div className='greeting'>
                 <p className='greetingHello'> Hola, Soy</p>
@@ -52,9 +52,9 @@ const AboutMeStyles = styled.div`
     height: 100%;
     
     img {
-      height: 490px;
-      margin-left: 320px;
-      margin-top: 50px;
+      border-radius: 50%;
+      width: 75%!important;
+      margin-left: 420px;
     }
   }
 
@@ -64,6 +64,7 @@ const AboutMeStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    margin-left: 150px;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     font-weight: 500;
@@ -93,7 +94,7 @@ const AboutMeStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: 50%;
+    width: 80%;
     margin-top: 2rem;
     
     h4 {
@@ -102,6 +103,15 @@ const AboutMeStyles = styled.div`
   }
 
   /* MEDIA QUERY */
+  @media (max-width: 1400px) {
+
+    .aboutMetextContainer img {
+      width: 95% !important;
+      margin-left: 220px;
+    }
+  
+  }
+  
   @media (max-width: 1024px) {
     flex-direction: column;
     height: auto;
@@ -118,16 +128,23 @@ const AboutMeStyles = styled.div`
 
     .aboutMetextContainer img {
       margin: 0;
+      width: 350px!important;
       height: 350px;
     }
 
     .greeting {
       align-items: center;
+      margin-left: 0px;
+    }
+    
+    .greeting p {
+      font-size: 12px;
     }
 
     .textContainer {
       align-items: center;
       margin-top: 0;
+      margin-bottom: 5rem;
     }
   }
 `;
