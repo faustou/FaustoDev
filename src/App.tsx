@@ -7,6 +7,7 @@ import AboutMe from './components/aboutMe/AboutMe.tsx';
 import Tools from './components/tools/Tools.tsx';
 import Proyects from './components/projects/Proyects.tsx';
 import Footer from './components/footer/Footer.tsx';
+import ImageLinks from './components/imageLinks/ImageLinks.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <AppContainer>
           <Navbar theme={theme} setTheme={setTheme} />
           <section id='AboutMe'><AboutMe /></section>
+          <section id='ImageLinks'><ImageLinks /></section>
           <section id='Proyects'><Proyects /></section>
           <section id='Tools'><Tools /></section>
           <section id='Footer'><Footer /></section>

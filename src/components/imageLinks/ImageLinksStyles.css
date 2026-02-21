@@ -1,0 +1,171 @@
+/* === CONTENEDOR PRINCIPAL === */
+.image-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* === CARD DE IMAGEN === */
+.image-link-card {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-link-card:focus {
+  outline: 3px solid #df2916;
+  outline-offset: 3px;
+}
+
+/* === IMAGEN === */
+.image-link-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-link-card:hover img {
+  transform: scale(1.05);
+}
+
+/* === OVERLAY === */
+.image-link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-link-card:hover .image-link-overlay {
+  opacity: 1;
+}
+
+/* === ICONO === */
+.image-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(141, 10, 10, 0.9);
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.image-link-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.image-link-card:hover .image-link-icon {
+  transform: scale(1.1);
+}
+
+/* === RESPONSIVE: TABLET === */
+@media (max-width: 992px) {
+  .image-links-container {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .image-link-card {
+    max-width: 350px;
+  }
+
+  .image-link-icon {
+    padding: 12px;
+  }
+
+  .image-link-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* === RESPONSIVE: TABLET PEQUEÑA === */
+@media (max-width: 768px) {
+  .image-links-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .image-link-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 10px);
+    min-width: 250px;
+  }
+}
+
+/* === RESPONSIVE: MÓVIL === */
+@media (max-width: 550px) {
+  .image-links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .image-link-card {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .image-link-icon {
+    padding: 10px;
+  }
+
+  .image-link-icon img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* === RESPONSIVE: MÓVIL PEQUEÑO === */
+@media (max-width: 380px) {
+  .image-links-container {
+    padding: 0 8px;
+    gap: 12px;
+  }
+
+  .image-link-card {
+    border-radius: 8px;
+  }
+
+  .image-link-icon {
+    padding: 8px;
+  }
+
+  .image-link-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}

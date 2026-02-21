@@ -44,7 +44,7 @@ const Footer = () => {
       <a href="#AboutMe" className="scroll-top-button">
         ⬆ Volver al inicio
       </a>
-      <p className="copyright">© 2024 Fausto Scarmato. Todos los derechos reservados.</p>
+      <p className="copyright">© 2026 Fausto Scarmato. Todos los derechos reservados.</p>
 
     </FooterStyles>
     

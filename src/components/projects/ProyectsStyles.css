@@ -281,352 +281,491 @@ body {
   transform: scale(1.1);
 }
 
-/* BUTTON CLOSE */
-
-.button-close {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
-  background-color: #444 !important;
-  color: white !important;
-  border: none !important;
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+/* ========================
+   GLOBAL MODAL
+   ======================== */
 
 .modal-body {
-  text-align: center;
+  padding: 0;
 }
-
-/* CONTENIDO DE LOS MODAL GLOBALES */
 
 .modal-content {
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  border-radius: 35px !important;
+  border-radius: 24px !important;
   padding: 0 !important;
 }
 
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
 
+/* ========================
+   CLOSE BUTTON
+   ======================== */
 
-/* === MODAL 3NG TECH ===*/
+.button-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  bottom: auto !important;
+  z-index: 10;
+  width: 34px !important;
+  height: 34px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.button-close:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  transform: none !important;
+}
+
+/* ========================
+   MODAL 3NG TECH
+   ======================== */
 
 .tech-modal-body {
+  position: relative;
   padding: 0;
-  border-radius: 35px;
-  border-color: #0e0e0e;
-  background-color: #0e0e0e;
-  box-shadow: 0 0 70px rgba(255, 0, 0, 0.4);
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #080808;
+  box-shadow: 0 0 60px rgba(200, 20, 20, 0.3), 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.tech-modal-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8b0000, #ff4444, #ff0000, #ff4444, #8b0000);
+  z-index: 1;
+}
+
+.tech-modal {
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .modal-card-tech {
-  background-color: #0e0e0e;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 20px;
-  color: #dcdcdc;
+  position: relative;
+  background: transparent;
+  padding: 48px 40px 38px;
+  margin: 0;
+  color: #e0e0e0;
   text-align: left;
   font-family: 'Inter', sans-serif;
 }
 
 .modal-title-tech {
-  color: #ff2d2d;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 5px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
 }
 
 .modal-subtitle-tech {
-  color: #999;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ff4444;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
 }
 
 .modal-description-tech {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.78;
+  color: #888;
+  margin-bottom: 20px;
 }
 
 .modal-tech-tech {
-  font-size: 0.95rem;
-  font-weight: 400;
-  margin-bottom: 25px;
-  color: #ddd;
+  font-size: 0.8rem;
+  color: #444;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #181818;
+}
+
+.modal-tech-tech strong {
+  color: #666;
+  font-weight: 600;
 }
 
 .modal-visit-tech {
-  background: linear-gradient(180deg, #ff3c3c, #c40000) !important;
+  background: linear-gradient(135deg, #e83030, #a00000) !important;
   border: none !important;
-  color: white !important;
-  font-weight: bold;
-  padding: 10px 15px !important;
-  border-radius: 12px !important;
-  font-size: 1rem;
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.25);
-  text-transform: uppercase;
+  color: #fff !important;
+  font-weight: 700 !important;
+  padding: 12px 30px !important;
+  border-radius: 10px !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 22px rgba(200, 20, 20, 0.45) !important;
+  transition: all 0.2s ease !important;
 }
 
+.modal-visit-tech:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 7px 30px rgba(200, 20, 20, 0.6) !important;
+}
 
-/* === MODAL COINPAY ===*/
+/* ========================
+   MODAL COINPAY
+   ======================== */
 
-.coinpay-modal{
+.coinpay-modal {
   padding: 0;
   border: none;
-  background-color: none;
-  background-clip: none;
-}
-
-.tech-modal{
-  border: none!important;
-  background-color: none!important;
-  background-clip: none!important;
-}
-
-.modal-card-coinpay {
-  background: linear-gradient(135deg, #1c002e, #350065);
-  border: 3px solid #9c4fff;
-  border-radius: 18px;
-  padding: 30px;
-  margin: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  position: relative;
-  text-align: center;
-  color: #e8d9ff;
-  box-shadow: 0 0 25px rgba(156, 79, 255, 0.4);
-}
-
-.modal-title-coinpay {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.modal-description-coinpay {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #d0bdfd;
-}
-
-.modal-tech-coinpay {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 25px;
-}
-
-.modal-visit-coinpay {
-  background-color: #9c4fff !important;
-  border: none !important;
-  border-radius: 12px !important;
-  padding: 10px 20px !important;
-  font-size: 1rem;
-  font-weight: 500;
-  color: white !important;
-  box-shadow: 0 0 15px rgba(156, 79, 255, 0.6);
-  transition: background-color 0.2s ease;
-}
-
-.modal-visit-coinpay:hover {
-  background-color: #b574ff !important;
 }
 
 .modal-coinpay {
-  background-color: #350065 !important;
-  border-bottom: none!important;
-  border-top: none!important;
-  padding: 0;
-  border-radius: 35px;
-  box-shadow: 0 0 70px rgba(156, 79, 255, 0.6);
+  position: relative;
+  background: linear-gradient(150deg, #0a0015 0%, #140028 100%) !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  box-shadow: 0 0 80px rgba(156, 79, 255, 0.4), 0 30px 80px rgba(0, 0, 0, 0.75) !important;
+}
+
+.modal-coinpay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #5500aa, #9c4fff, #cc88ff, #9c4fff, #5500aa);
+  z-index: 1;
+}
+
+.modal-card-coinpay {
+  position: relative;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 48px 40px 38px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  color: #d8c8f8;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .modal-card-coinpay::before,
 .modal-card-coinpay::after {
   content: '';
   position: absolute;
-  width: 60px;
-  height: 60px;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.2;
+  opacity: 0.03;
   pointer-events: none;
 }
 
 .modal-card-coinpay::before {
-  width: 420px;
-  height: 420px;
-  top: -20px;
-  left: 55px;
+  width: 360px;
+  height: 360px;
+  top: -50px;
+  left: 30px;
   background-image: url('../../assets/cart.png');
 }
 
 .modal-card-coinpay::after {
-  bottom: 20px;
-  right: 20px;
+  width: 90px;
+  height: 90px;
+  bottom: 40px;
+  right: 30px;
   background-image: url('../../assets/ethe.png');
-  
 }
 
-/* === MODAL GA-FIT === */
+.modal-title-coinpay {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.modal-description-coinpay {
+  font-size: 0.95rem;
+  line-height: 1.78;
+  color: #8868b8;
+  margin-bottom: 20px;
+}
+
+.modal-tech-coinpay {
+  font-size: 0.8rem;
+  color: #3d2860;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(156, 79, 255, 0.12);
+}
+
+.modal-tech-coinpay strong {
+  color: #6644aa;
+  font-weight: 600;
+}
+
+.modal-visit-coinpay {
+  background: linear-gradient(135deg, #9c4fff, #6600cc) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 12px 30px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 4px 22px rgba(156, 79, 255, 0.45) !important;
+  transition: all 0.2s ease !important;
+}
+
+.modal-visit-coinpay:hover {
+  background: linear-gradient(135deg, #b870ff, #8833ee) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 7px 30px rgba(156, 79, 255, 0.6) !important;
+}
+
+.modal-coinpay .button-close {
+  background: rgba(156, 79, 255, 0.1) !important;
+  color: rgba(190, 150, 255, 0.65) !important;
+  border: 1px solid rgba(156, 79, 255, 0.18) !important;
+}
+
+.modal-coinpay .button-close:hover {
+  background: rgba(156, 79, 255, 0.22) !important;
+  color: #cc99ff !important;
+}
+
+/* ========================
+   MODAL GA-FIT
+   ======================== */
+
+.modal-gafit {
+  position: relative;
+  background: linear-gradient(150deg, #040c0e 0%, #091618 100%) !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  box-shadow: 0 0 70px rgba(59, 233, 255, 0.28), 0 30px 80px rgba(0, 0, 0, 0.75) !important;
+}
+
+.modal-gafit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007a90, #3be9ff, #00d4ee, #3be9ff, #007a90);
+  z-index: 1;
+}
+
 .gafit-modal {
   background: transparent;
   padding: 0;
 }
 
 .modal-card-gafit {
-  background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
-  border: 3px solid #3be9ff;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 20px;
-  font-family: 'Segoe UI', sans-serif;
   position: relative;
-  text-align: center;
-  color: #f0f0f0;
-  box-shadow: 0 0 25px hsla(199, 93%, 47%, 0.4);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 48px 40px 38px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  color: #c8f0f4;
+  box-shadow: none;
 }
 
 .modal-title-gafit {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 2.1rem;
+  font-weight: 800;
   color: #3be9ff;
-  line-height: 1.3;
+  margin-bottom: 6px;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
 }
 
 .modal-description-gafit {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #dddddd;
+  font-size: 0.95rem;
+  line-height: 1.78;
+  color: #4d9099;
+  margin-bottom: 20px;
 }
 
 .modal-tech-gafit {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 25px;
-  color: #cfcfcf;
+  font-size: 0.8rem;
+  color: #204a50;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(59, 233, 255, 0.1);
+}
+
+.modal-tech-gafit strong {
+  color: #2d7080;
+  font-weight: 600;
 }
 
 .modal-visit-gafit {
-  background-color: #3be9ff !important;
+  background: linear-gradient(135deg, #3be9ff, #00aac4) !important;
   border: none !important;
-  border-radius: 12px !important;
-  padding: 10px 20px !important;
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 0 12px hsla(199, 93%, 47%, 0.4);
-  color: #0e0e0e !important;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
+  border-radius: 10px !important;
+  padding: 12px 30px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  color: #020e10 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 22px rgba(59, 233, 255, 0.32) !important;
+  transition: all 0.2s ease !important;
 }
 
 .modal-visit-gafit:hover {
-  background-color: #3be9ff !important;
+  background: linear-gradient(135deg, #70f2ff, #3be9ff) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 7px 30px rgba(59, 233, 255, 0.5) !important;
 }
 
+.modal-gafit .button-close {
+  background: rgba(59, 233, 255, 0.07) !important;
+  color: rgba(59, 233, 255, 0.55) !important;
+  border: 1px solid rgba(59, 233, 255, 0.13) !important;
+}
 
+.modal-gafit .button-close:hover {
+  background: rgba(59, 233, 255, 0.16) !important;
+  color: #3be9ff !important;
+}
 
-/* === MODAL BACHSHOP === */
+/* ========================
+   MODAL BACHSHOP
+   ======================== */
 
 .bachshop-modal {
   background: transparent;
   padding: 0;
 }
 
-.modal-card {
-  background-color: #fff9f0;
-  border: 4px solid #fdd9a0;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 20px;
-  font-family: 'Georgia', serif;
-  position: relative;
-  text-align: center;
-  color: #3d2b1f;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.modal-title {
-  color: #3d2b1f;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-
-.modal-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.modal-tech {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 25px;
-}
-
-.modal-visit {
-  background-color: #fdd9a0 !important;
-  border: none !important;
-  border-radius: 12px !important;
-  padding: 10px 20px !important;
-  font-size: 1rem;
-  font-weight: 500;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
-  color: #3d2b1f !important;
-}
-
 .modal-bach {
-  background-color: #fdd9a0 !important;
-  border-bottom: none!important;
-  border-top: none!important;
-  padding: 0;
-  border-radius: 35px;
-  border-color: #0e0e0e;
-  background-color: #0e0e0e;
-  box-shadow: 0 0 90px rgba(0, 0, 0, 0.9);
+  position: relative;
+  background: #fdf7ee !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  box-shadow: 0 0 50px rgba(200, 140, 20, 0.18), 0 30px 80px rgba(0, 0, 0, 0.28) !important;
+}
+
+.modal-bach::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #a06000, #e8a020, #f5c842, #e8a020, #a06000);
+  z-index: 1;
+}
+
+.modal-card {
+  position: relative;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 48px 40px 38px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  color: #3d2b1f;
+  box-shadow: none;
 }
 
 .modal-card::before,
 .modal-card::after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: contain;
+  content: none;
 }
 
-.modal-card::before {
-  top: -50px;
-  left: 350px;
-  background-image: url('../../assets/flower-top-left.png');
-
+.modal-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #2a1a08;
+  margin-bottom: 6px;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
 }
 
-.modal-card::after {
-  bottom: 10px;
-  right: 10px;
-  width: 150px;
-  height: 150px;
-  background-image: url('../../assets/flower-bottom-right.png');
-  opacity: 1;
+.modal-description {
+  font-size: 0.95rem;
+  line-height: 1.78;
+  color: #7a5840;
+  margin-bottom: 20px;
 }
 
-.modal-card::after {
-  bottom: -50px;
-  right: 310px;
-  width: 150px;
-  height: 150px;
-  background-image: url('../../assets/flower-bottom-left.png');
+.modal-tech {
+  font-size: 0.8rem;
+  color: #b09878;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #e8d8b8;
+}
+
+.modal-tech strong {
+  color: #8a6848;
+  font-weight: 600;
+}
+
+.modal-visit {
+  background: linear-gradient(135deg, #d48800, #a86000) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 12px 30px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 4px 22px rgba(180, 120, 0, 0.38) !important;
+  transition: all 0.2s ease !important;
+}
+
+.modal-visit:hover {
+  background: linear-gradient(135deg, #f0a000, #c07000) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 7px 30px rgba(180, 120, 0, 0.55) !important;
+}
+
+.modal-bach .button-close {
+  background: rgba(180, 120, 0, 0.08) !important;
+  color: rgba(140, 90, 0, 0.65) !important;
+  border: 1px solid rgba(180, 120, 0, 0.18) !important;
+}
+
+.modal-bach .button-close:hover {
+  background: rgba(180, 120, 0, 0.18) !important;
+  color: #8a5a00 !important;
 }

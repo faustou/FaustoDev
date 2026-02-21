@@ -185,24 +185,30 @@ const ToolsStyles = styled.div`
   .card-body {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 20px 0;
   }
 
   .layout {
     width: 100%;
+    max-width: 1600px;
+    margin: 0 auto 2rem auto;
+    padding: 0 20px;
     display: flex;
     gap: 28px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    align-items: stretch;
   }
 
   .tools {
     width: 470px;
-    height: 180px;
+    min-height: 180px;
     border-radius: 18px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     background-color: ${({ theme }) => theme.primary};
@@ -217,10 +223,10 @@ const ToolsStyles = styled.div`
 
   .tool {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
-    margin-left: 20px;
-    gap: 20px;
+    padding: 0 20px;
+    gap: 15px;
   }
 
   .icon-container {
@@ -231,6 +237,7 @@ const ToolsStyles = styled.div`
     border-radius: 12px;
     height: 48px;
     width: 48px;
+    min-width: 48px;
     box-shadow: 0 4px 10px rgba(162, 89, 255, 0.3);
   }
 
@@ -259,13 +266,15 @@ const ToolsStyles = styled.div`
   }
 
   .description-tool {
-    margin: 0px 15px 25px 15px;
+    margin: 0px 20px 0 20px;
+    flex: 1;
   }
 
   .description {
-    margin: 0 0 0 10px;
+    margin: 0;
     text-align: left;
     font-size: 0.9rem;
+    line-height: 1.5;
     color: ${({ theme }) => theme.text};
   }
 
@@ -279,6 +288,14 @@ const ToolsStyles = styled.div`
   }
 
   @media (max-width: 967px) {
+    .layout {
+      gap: 20px;
+    }
+
+    .tools {
+      width: 420px;
+    }
+
     h2 {
       margin: 3rem;
       font-size: 1.8rem;
@@ -296,25 +313,119 @@ const ToolsStyles = styled.div`
   }
 
   @media (max-width: 600px) {
-    .tools {
-      width: 360px;
-      height: 170px;
+    .layout {
+      padding: 0 15px;
+      gap: 18px;
     }
+
+    .tools {
+      width: 100%;
+      max-width: 400px;
+      min-height: 150px;
+    }
+
+    .card-body {
+      padding: 15px 0;
+      gap: 0.6rem;
+    }
+
+    .tool {
+      padding: 0 15px;
+      gap: 12px;
+    }
+
+    .icon-container {
+      height: 42px;
+      width: 42px;
+      min-width: 42px;
+    }
+
+    .icon-container svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .main-title {
+      font-size: 1rem;
+    }
+
+    .sub-title {
+      font-size: 0.8rem;
+    }
+
+    .description-tool {
+      margin: 0 15px;
+    }
+
+    .description {
+      font-size: 0.85rem;
+    }
+
     h2 {
-      margin: 3rem;
+      margin: 2rem 1rem;
       font-size: 1.4rem;
     }
   }
 
   @media (max-width: 425px) {
+    .layout {
+      padding: 0 12px;
+      gap: 15px;
+    }
+
     .tools {
-      width: 320px;
-      height: 180px;
+      width: 100%;
+      max-width: 100%;
+      min-height: 140px;
+    }
+
+    .card-body {
+      padding: 12px 0;
+      gap: 0.5rem;
+    }
+
+    .tool {
+      padding: 0 12px;
+      gap: 10px;
+    }
+
+    .icon-container {
+      height: 38px;
+      width: 38px;
+      min-width: 38px;
+      border-radius: 10px;
+    }
+
+    .icon-container svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .icon-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .main-title {
+      font-size: 0.95rem;
+    }
+
+    .sub-title {
+      font-size: 0.75rem;
+      word-break: break-word;
+    }
+
+    .description-tool {
+      margin: 0 12px;
+    }
+
+    .description {
+      font-size: 0.8rem;
     }
 
     h2 {
-      margin: 1.5rem;
-      font-size: 1.2rem;
+      margin: 1.5rem 0.8rem;
+      font-size: 1.15rem;
     }
   }
 `;
